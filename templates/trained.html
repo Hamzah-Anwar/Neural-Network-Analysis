@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TRAINING RESULTS</title>
+</head>
+<body>
+	<h1>results for {{ layers }} layer network with {{ totalnodes }} total hidden nodes, using a learning rate of {{ lr }} with the {{ activation }} activation function: epochs: {{ epochs }}, used {{ trainrange }} image samples</h1>
+
+	{% if epochs > 1 %}
+	<ul>
+		{% for i in range(epochs) %}
+		<li>ACCURACY AFTER EPOCH {{i+1}} is {{ epochacc[i] }} </li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	<h2>The accuracy of the network is {{ epochacc }}</h2>
+	{% endif %}
+
+	<p>took {{ time }} seconds</p>
+	<button onclick="location.href='/'">GO BACK</button>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='trained.js') }}"></script>
+</html>

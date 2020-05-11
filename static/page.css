@@ -1,0 +1,34 @@
+*{
+	margin:0;
+	padding: 0;
+
+}
+
+#bar {
+	height: 75px;
+	background: grey;
+	margin:0 auto; 
+	width: 100%;
+}
+
+#drawscreen {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 50px;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	align: center;
+}
+
+
+
+#info{
+	float: right;
+}
+
+#back{
+	float: left;
+}

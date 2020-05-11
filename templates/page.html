@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TEST PAGE</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='page.css') }}">
+</head>
+<body scroll="no">
+	<div id="drawscreen">
+		<div id="bar"><h1 id="answer"></h1></div>
+		<div id="info">
+			<p>learning rate: {{ data[0] }}</p><br>
+			<p>hidden layers: {{ data[1] }}</p><br>
+			<p>hidden nodes: {{ data[2] }}</p><br>
+			<p>hidden layers structure: {{ data[8:] }}</p><br>
+			<p>activation function: {{ data[3] }}</p><br>
+			<p>epochs: {{ data[4] }}</p><br>
+			<p>training samples: {{ data[5] }}</p><br>
+			<p>time taken: {{ data[6] }}</p><br>
+			<p>accuray: {{ data[7] }}</p><br>
+		</div>
+		<div id="back">
+			<canvas id="draw" style="border: 1px solid black;"></canvas>
+			<h2>USE SPACE TO CLEAR</h2>
+			<h2>USE ENTER TO RECOGNISE</h2>
+			<button onclick="location.href='/'">Go home</button>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='page.js') }}"></script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>variable selector</title>
+</head>
+<body>
+	<form action="{{ url_for('graph') }}" method="post">
+		<h2>x-axis</h2>
+		<label>learning rate</label><input type="radio" name="x" value="0" required><br>
+		<label>number of hidden layers</label><input type="radio" name="x" value="1" required><br>
+		<label>total number of hidden nodes</label><input type="radio" name="x" value="2" required><br>
+		<label>number of epochs</label><input type="radio" name="x" value="3" required><br>
+		<label>training sample used</label><input type="radio" name="x" value="4" required><br>
+		<label>time taken to train</label><input type="radio" name="x" value="5" required><br>
+		<label></label>accuracy<input type="radio" name="x" value="6" required><br>
+	
+	
+		<h2>y-axis</h2>
+		<label>learning rate</label><input type="radio" name="y" value="0" required><br>
+		<label>number of hidden layers</label><input type="radio" name="y" value="1" required><br>
+		<label>total number of hidden nodes</label><input type="radio" name="y" value="2" required><br>
+		<label>number of epochs</label><input type="radio" name="y" value="3" required><br>
+		<label>training sample used</label><input type="radio" name="y" value="4" required><br>
+		<label>time taken to train</label><input type="radio" name="y" value="5" required><br>
+		<label></label>accuracy<input type="radio" name="y" value="6" required><br>
+	
+		<input type="submit" value="create graph">
+	</form>
+</body>
+</html>

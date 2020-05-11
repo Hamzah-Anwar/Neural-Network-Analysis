@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NN testing</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<p>format=[learning rate, #of layers, #ofnodes, function, epochs, samples, time, accuracy, hidden layer structure]</p>
+	<form action="{{ url_for('draw') }}" method="post">
+		<select name="network">
+			{% for i in range(numnetworks) %}
+			<option name="network" value="{{ i }}">{{ networks[i] }}</option>
+			{% endfor %}
+		</select>
+	<input type="submit" value="select">
+	</form>
+</body>
+</html>

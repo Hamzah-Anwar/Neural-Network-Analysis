@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train a NN</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='train.css') }}">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<div id="animation"><img src="{{ url_for('static', filename='neural_network_3d.gif') }}" id="img"></div>
+	<form id="layerform" class="onload">
+		<input type="number" id="#oflayers" max="5" min="1" required>
+		<label>number of hidden layers</label><button type="submit" id="selectlayers">select</button>
+	</form>
+	<form action="{{ url_for('data') }}" id="nn" method="post" class="onload" onsubmit="hide()">
+		<br>
+		<div id="layers"></div>
+		<label>learning rate  </label><input type="number" name="learningrate" step="0.001" min="0" required><br>
+		<label>Activation Function</label><br>
+		<input type="radio" name="activation" value="sigmoid" checked>sigmoid<br>
+		<input type="radio" name="activation" value="relu">relu<br>
+		<input type="radio" name="activation" value="tanh">tanh<br>
+		<label>epochs  </label><input type="number" name="epochs" min="0" required><br>
+		<label>training data</label><input type="range" min="0" max="60000" id="data_slider" name="trainrange"><p id="currentrange"></p><br>
+		<input type="submit" value="start training">
+	</form>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='train.js') }}"></script>
+</html>
